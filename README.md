@@ -1,7 +1,18 @@
 ﻿# GCP Secrets Manager Test for Java
 
 
-I would like to use GCP Secrets Manager for my Java 9+ application. The main trouble comes when using the module-info.java file, if I use a version of Java less than 9 that doesn't have the module-info.java file, then it works fine. The main error that comes up is `The import com.google.cloud.secretmanager.v1.AccessSecretVersionResponse cannot be resolvedJava(268435846).` However, I am able to use VS Code's intellisense and click into the Class file that the import references.
+I would like to use GCP Secrets Manager for my Java 9+ application. The main trouble comes when using the module-info.java file, if I use a version of Java less than 9 that doesn't have the module-info.java file, then it works fine. The main error that comes up is `The import com.google.cloud.secretmanager.v1.SecretVersion cannot be resolvedJava(268435846).`, and that applies to the following classes:
+
+```
+AccessSecretVersionResponse
+ProjectName
+Replication
+Secret
+SecretPayload
+SecretVersion
+```
+
+However, I am able to use VS Code's intellisense and click into the Class file that the import references.
 
 ![image](https://github.com/phillipshaong/java-gcp-secrets-manager-test/assets/64993172/11187dc0-b8b3-49b8-9a2b-13a268539684)
 
